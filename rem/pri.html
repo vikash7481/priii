@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funny Princess Day – Priya 😂💗</title>
+
+<style>
+  body {
+    margin: 0;
+    background: linear-gradient(135deg, #ffe4f2, #fff0f7);
+    font-family: Comic Sans MS, sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  .start-screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn {
+    background: #ff4fa1;
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    font-size: 22px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  h1 {
+    color: #d20077;
+    text-shadow: 2px 2px #ffa1d9;
+  }
+
+  .content,
+  .page2,
+  .page3 {
+    display: none;
+    padding: 20px;
+  }
+
+  .funny-text {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 20px;
+    color: #70003e;
+    line-height: 1.6;
+  }
+
+  /* Slideshow */
+  .slideshow {
+        width: 380px;
+        height: 280px;
+    margin-left: 10px auto;
+     display: block;
+ align-items: center;
+ justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slideshow img {
+  
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    animation: swap 20s infinite;
+  }
+
+  .slideshow img:nth-child(1){ animation-delay: 0s; }
+  .slideshow img:nth-child(2){ animation-delay: 4s; }
+  .slideshow img:nth-child(3){ animation-delay: 8s; }
+  .slideshow img:nth-child(4){ animation-delay: 12s; }
+  .slideshow img:nth-child(5){ animation-delay: 16s; }
+
+  @keyframes swap {
+    0%{opacity:0}
+    10%{opacity:1}
+    30%{opacity:1}
+    40%{opacity:0}
+    100%{opacity:0}
+  }
+
+  /* Emoji rain */
+  .emoji {
+    position: fixed;
+    top: -20px;
+    font-size: 28px;
+    animation: fall 4s linear infinite;
+    pointer-events: none;
+  }
+
+  @keyframes fall {
+    from { transform: translateY(0); }
+    to   { transform: translateY(110vh); }
+  }
+
+  /* 3D Carousel */
+  .carousel-wrapper {
+    width: 300px;
+    height: 300px;
+    margin: 40px auto;
+    perspective: 900px;
+  }
+
+  .carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 12s linear infinite;
+  }
+
+  .carousel img {
+    position: absolute;
+    width: 160px;
+    height: 220px;
+    left: 70px;
+    top: 40px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 4px solid #ff4fa1;
+    box-shadow: 0 0 15px #ff8ac9;
+  }
+
+  .carousel img:nth-child(1) { transform: rotateY(0deg) translateZ(280px); }
+  .carousel img:nth-child(2) { transform: rotateY(60deg) translateZ(280px); }
+  .carousel img:nth-child(3) { transform: rotateY(120deg) translateZ(280px); }
+  .carousel img:nth-child(4) { transform: rotateY(180deg) translateZ(280px); }
+  .carousel img:nth-child(5) { transform: rotateY(240deg) translateZ(280px); }
+  .carousel img:nth-child(6) { transform: rotateY(300deg) translateZ(280px); }
+
+  @keyframes rotate {
+    from { transform: rotateY(0deg); }
+    to   { transform: rotateY(360deg); }
+  }
+
+  /* Fireworks Canvas */
+  #fireworksCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    pointer-events: none;
+  }
+</style>
+</head>
+
+<body>
+
+<canvas id="fireworksCanvas"></canvas>
+
+<!-- Background Music -->
+<audio id="bgMusic" autoplay loop>
+  <source src="/photo/WhatsApp Audio 2025-11-18 at 12.48.06_c024c203.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Start Page -->
+<div class="start-screen" id="start">
+  <h1>Hi</h1>
+  <button class="btn" onclick="showContent()">plz Click it💗</button>
+</div>
+
+<!-- PAGE 1 -->
+<div class="content" id="content">
+  <h1>Welcome to Your Funny Kingdom 👑😂</h1>
+
+  <p class="funny-text">
+     if beauty had a WiFi password,  
+    only YOU would know it.  
+    If cuteness was a bank loan —  
+    you owe the world MILLIONS. 😂💗  
+  </p>
+
+  <p>Happy Princess Day to Princess Priya, the one whose <br> laughter lights up my world, <br>whose attitude challenges my patience, and whose beauty
+     makes me forget every complaint I had five minutes ago.”  </p>
+  <div class="slideshow">
+    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.56_2e93f13b.jpg" />
+    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.56_fc38debb.jpg" />
+    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.57_064ada6d.jpg" />
+    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.57_4cd95960.jpg" />
+    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.57_51ccdc20.jpg" />
+    
+  </div>
+
+  <button class="btn" onclick="showPage2()">Next Page 👉❤️</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page2" id="page2">
+  <h1>Priya’s Princess Gallery 👑✨</h1>
+
+  <p class="funny-text">
+   To my Princess Priya: You may not live in a palace, 
+   but your personality rules like one. Your grace is royal, 
+   your jokes are questionable, and your heart… unquestionably mine
+   <br>
+    Turning like a superstar on a dream stage ✨💗
+<br>
+    Happy Princess day yr not for day 
+  </p>
+
+  <div class="carousel-wrapper">
+    <div class="carousel">
+       <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.56_2e93f13b.jpg" />
+    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.56_fc38debb.jpg" />
+    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.57_064ada6d.jpg" />
+    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.57_4cd95960.jpg" />
+    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.57_51ccdc20.jpg" />
+    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.58_f65425ef.jpg" />
+    </div>
+  </div>
+
+  <button class="btn" onclick="showPage3()">Next Page 💗👉</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page3" id="page3">
+  <h1>Priya, You Are the Cutest Princess Ever 💗👑</h1>
+
+  <p class="funny-text">
+     this page is only for ONE purpose…  
+    To remind you that *you are special*,  
+    you are sweet,  
+    and you make the whole world bright ✨💗🥺  
+  </p>
+
+  <img src="/photo/WhatsApp Image 2025-11-18 at 12.17.07_13937125.jpg" style="
+    width:260px;
+    height:260px;
+    border-radius:20px;
+    border:5px solid #ff4fa1;
+    box-shadow:0 0 15px #ff8ac9;
+  ">
+</div>
+
+<script>
+function showContent() {
+  document.getElementById("start").style.display = "none";
+  document.getElementById("content").style.display = "block";
+  document.getElementById("bgMusic").play();
+}
+
+function showPage2() {
+  document.getElementById("content").style.display = "none";
+  document.getElementById("page2").style.display = "block";
+
+  startFireworks(); // Start fireworks on Page 2
+}
+
+function showPage3() {
+  document.getElementById("page2").style.display = "none";
+  document.getElementById("page3").style.display = "block";
+}
+
+/* HEART + FLOWER RAIN */
+setInterval(() => {
+  const emo = document.createElement("div");
+  emo.className = "emoji";
+
+  const icons = ["😊","💗","💖","🌸","🌺","🌹"];
+  emo.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+
+  emo.style.left = Math.random() * 100 + "vw";
+  emo.style.animationDuration = (3 + Math.random() * 2) + "s";
+
+  document.body.appendChild(emo);
+  setTimeout(() => emo.remove(), 5000);
+}, 300);
+
+
+/* ---------------- FIREWORKS EFFECT ---------------- */
+function startFireworks() {
+  const canvas = document.getElementById("fireworksCanvas");
+  const ctx = canvas.getContext("2d");
+
+  canvas.style.display = "block";
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  let particles = [];
+
+  function createFirework() {
+    const x = Math.random() * canvas.width;
+    const y = Math.random() * canvas.height * 0.5;
+    const colors = ["#ff0066", "#ff66cc", "#ff1493", "#ff4fa1", "#ff99dd"];
+
+    for (let i = 0; i < 50; i++) {
+      particles.push({
+        x,
+        y,
+        radius: Math.random() * 3 + 1,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        speedX: (Math.random() - 0.5) * 5,
+        speedY: (Math.random() - 0.5) * 5,
+        alpha: 1
+      });
+    }
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    particles.forEach((p, i) => {
+      p.x += p.speedX;
+      p.y += p.speedY;
+      p.alpha -= 0.02;
+
+      if (p.alpha <= 0) particles.splice(i, 1);
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = p.alpha;
+      ctx.fill();
+      ctx.globalAlpha = 1;
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  setInterval(createFirework, 500);
+  animate();
+}
+</script>
+
+</body>
+</html>
