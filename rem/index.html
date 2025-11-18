@@ -55,18 +55,17 @@
 
   /* Slideshow */
   .slideshow {
-        width: 380px;
-        height: 280px;
+    width: 380px;
+    height: 280px;
     margin-left: 10px auto;
-     display: block;
- align-items: center;
- justify-content: center;
+    display: block;
+    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
   }
 
   .slideshow img {
-  
     height: 100%;
     position: absolute;
     opacity: 0;
@@ -160,7 +159,7 @@
 
 <!-- Background Music -->
 <audio id="bgMusic" autoplay loop>
-  <source src="/photo/WhatsApp Audio 2025-11-18 at 12.48.06_c024c203.mp3" type="audio/mpeg">
+  <source src="photo/WhatsApp Audio 2025-11-18 at 12.48.06_c024c203.mp3" type="audio/mpeg">
 </audio>
 
 <!-- Start Page -->
@@ -182,13 +181,13 @@
 
   <p>Happy Princess Day to Princess Priya, the one whose <br> laughter lights up my world, <br>whose attitude challenges my patience, and whose beauty
      makes me forget every complaint I had five minutes ago.”  </p>
+
   <div class="slideshow">
-    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.56_2e93f13b.jpg" />
-    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.56_fc38debb.jpg" />
-    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.57_064ada6d.jpg" />
-    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.57_4cd95960.jpg" />
-    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.57_51ccdc20.jpg" />
-    
+    <img src="photo/WhatsApp Image 2025-11-18 at 11.51.56_2e93f13b.jpg" />
+    <img src="photo/WhatsApp Image 2025-11-18 at 11.51.56_fc38debb.jpg" />
+    <img src="photo/WhatsApp Image 2025-11-18 at 11.51.57_064ada6d.jpg" />
+    <img src="photo/WhatsApp Image 2025-11-18 at 11.51.57_4cd95960.jpg" />
+    <img src="photo/WhatsApp Image 2025-11-18 at 11.51.57_51ccdc20.jpg" />
   </div>
 
   <button class="btn" onclick="showPage2()">Next Page 👉❤️</button>
@@ -210,12 +209,12 @@
 
   <div class="carousel-wrapper">
     <div class="carousel">
-       <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.56_2e93f13b.jpg" />
-    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.56_fc38debb.jpg" />
-    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.57_064ada6d.jpg" />
-    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.57_4cd95960.jpg" />
-    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.57_51ccdc20.jpg" />
-    <img src="/photo/WhatsApp Image 2025-11-18 at 11.51.58_f65425ef.jpg" />
+       <img src="photo/WhatsApp Image 2025-11-18 at 11.51.56_2e93f13b.jpg" />
+       <img src="photo/WhatsApp Image 2025-11-18 at 11.51.56_fc38debb.jpg" />
+       <img src="photo/WhatsApp Image 2025-11-18 at 11.51.57_064ada6d.jpg" />
+       <img src="photo/WhatsApp Image 2025-11-18 at 11.51.57_4cd95960.jpg" />
+       <img src="photo/WhatsApp Image 2025-11-18 at 11.51.57_51ccdc20.jpg" />
+       <img src="photo/WhatsApp Image 2025-11-18 at 11.51.58_f65425ef.jpg" />
     </div>
   </div>
 
@@ -233,7 +232,7 @@
     and you make the whole world bright ✨💗🥺  
   </p>
 
-  <img src="/photo/WhatsApp Image 2025-11-18 at 12.17.07_13937125.jpg" style="
+  <img src="photo/WhatsApp Image 2025-11-18 at 12.17.07_13937125.jpg" style="
     width:260px;
     height:260px;
     border-radius:20px;
@@ -252,8 +251,7 @@ function showContent() {
 function showPage2() {
   document.getElementById("content").style.display = "none";
   document.getElementById("page2").style.display = "block";
-
-  startFireworks(); // Start fireworks on Page 2
+  startFireworks();
 }
 
 function showPage3() {
@@ -276,8 +274,7 @@ setInterval(() => {
   setTimeout(() => emo.remove(), 5000);
 }, 300);
 
-
-/* ---------------- FIREWORKS EFFECT ---------------- */
+/* FIREWORKS */
 function startFireworks() {
   const canvas = document.getElementById("fireworksCanvas");
   const ctx = canvas.getContext("2d");
